@@ -1,0 +1,23 @@
+name: Lobby
+version: ${project.version}
+main: net.whispwriting.lobby.Lobby
+api-version: 1.13
+prefix: Lobby
+authors: [WhispTheFox]
+description: A lobby plugin
+website: https://whispwriting.net
+
+commands:
+  lobbyset:
+    description: sets the lobby location
+    usage: /lobby
+
+permissions:
+  Lobby.setLobby:
+    description: allows setting the lobby
+    default: op
+  Lobby.*:
+    description: Wildcard Permission
+    default: op
+    children:
+      Lobby.setLobby: true
